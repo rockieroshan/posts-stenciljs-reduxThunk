@@ -1,0 +1,25 @@
+@import '../../assets/scss/main.scss';
+
+.appRoot {
+  @include flexCenter;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  input {
+    width: 360px;
+  }
+
+  .mainWrapper {
+    margin: 0 2em 3em 2em;
+    @include flexCenter;
+  }
+
+  @include screenType(tablet) {
+    @include flexColumn;
+    overflow: hidden;
+
+    .mainWrapper {
+      @include flexColumn;
+    }
+  }
+}

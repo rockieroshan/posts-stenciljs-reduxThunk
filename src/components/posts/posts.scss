@@ -1,0 +1,32 @@
+@import '../../assets/scss/main.scss';
+
+.postPaginatorWrapper {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .postPaginator {
+    margin: 2em auto;
+    height: 85vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .posts {
+      @include flexCenter;
+      @include flexColumn;
+    }
+  }
+  .paginator {
+    @include flexCenter;
+  }
+
+  @include screenType(tablet) {
+    .postPaginator {
+      height: 85vh;
+      width: auto;
+
+      .posts {
+        width: auto;
+      }
+    }
+  }
+}

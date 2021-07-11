@@ -1,0 +1,33 @@
+@import '../../../assets/scss/main.scss';
+
+.pagination {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+
+    a {
+      color: $blackColor;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      border: 1px solid #ddd;
+      font-size: 1.5em;
+
+      &:hover {
+        background-color: $cardBoxShadow;
+      }
+    }
+  }
+  @include screenType(tablet) {
+    li {
+      a {
+        font-size: 1em;
+        padding: 4px 12px;
+      }
+    }
+  }
+}

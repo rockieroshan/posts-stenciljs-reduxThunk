@@ -1,0 +1,36 @@
+@import '../../assets/scss/main.scss';
+
+.card {
+  color: $textColor;
+  box-shadow: 0px 0px 16px $cardBoxShadow;
+  border-radius: 8px 20px;
+  padding: 2em;
+  transition: 0.3s;
+  width: 600px;
+  background-color: $whiteColor;
+  margin-bottom: 1em;
+  @include flexLeftAlignedVertically;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 $cardBoxShadowHover;
+  }
+  .titleWithIcon {
+    width: 100%;
+    @include flexAlignedSpaceBetween;
+
+    .title {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      max-width: 550px;
+    }
+
+    .pencilIcon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  @include screenType(tablet) {
+    width: 290px;
+  }
+}
